@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StatsServiceTest {
-
     @Test
     void shouldCalculateSumSales() {
         StatsService service = new StatsService();
@@ -76,3 +75,4 @@ class StatsServiceTest {
         assertEquals(expected, actual);
     }
 }
+
