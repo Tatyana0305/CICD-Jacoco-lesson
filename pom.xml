@@ -21,6 +21,11 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.7</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -31,6 +36,29 @@
                 <configuration>
                     <failIfNoTests>true</failIfNoTests>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent-123456abc</id>
+                        <!--<phase>initialize</phase>-->
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report-234567ytgyuujn</id>
+                        <!--<phase>verify</phase>-->
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+
+                </executions>
             </plugin>
         </plugins>
     </build>
